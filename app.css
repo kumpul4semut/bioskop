@@ -1,7 +1,7 @@
 :root{
-    --bg-color:#06070D;
-    --avaible: #380441;
-    --nonavaible:#270020;
+    --bg-color:#02040f;
+    --avaible: #350029;
+    --nonavaible:#a99aac;
     --selected: #B41D93;
     --black:#000000;
     --white:#ffffff;
@@ -22,21 +22,22 @@
     width: 24px;
     height: 24px;
     background-color: var(--avaible);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: var(--white);
     display: flex;
     padding: 15px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .chair-non-avaible{
     width: 24px;
     height: 24px;
     margin-right: 5px;
     background-color: var(--nonavaible);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: var(--white);
     display: flex;
     padding: 15px;
@@ -48,8 +49,8 @@
     height: 24px;
     margin-right: 5px;
     background-color: var(--selected);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: var(--white);
     display: flex;
     padding: 15px;
@@ -59,8 +60,8 @@
 
 /* layar bioskop */
 .bioskop-screen{
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black  );
     font-size: 16px;
     text-align: center;
     padding: 20px;
