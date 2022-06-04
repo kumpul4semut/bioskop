@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- load css ku -->
+    <link rel="stylesheet" href="app.css">
+
+    <title>tayang!</title>
+  </head>
+  <body>
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- judul -->
+        <div class="row">
+            <div class="col">
+                <div class="d-flex">
+                    <img src="./img/Star.png">
+                    <h4>kings shopping center cgv</h4>
+                </div>
+                <small>Location and Cinema's Badge</small>
+                <br>
+                <span> <u>Bandung</u></span>
+            </div>
+            <div class="col">
+                <span class="cgv float-right">CGV</span>
+            </div>
+        </div>
+        <!-- ./judul -->
+
+        <!-- tanggal dan waktu -->
+        <section class="mt-5">
+            <h4>REGULER 2D</h4>
+            <!-- tanggal -->
+            <div class="row" id="tanggal">
+                <div class="col">
+                    <div class="non-available">
+                        <span>28 Feb</span>
+                        <span class="day">SEN</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="available">
+                        <span>28 Feb</span>
+                        <span class="day">SEN</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="available">
+                        <span>28 Feb</span>
+                        <span class="day">SEN</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="available">
+                        <span>28 Feb</span>
+                        <span class="day">SEN</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="non-available">
+                        <span>28 Feb</span>
+                        <span class="day">SEN</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ./tanggal -->
+            <!-- jam -->
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="non-available">
+                        <span>11:25</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="available">
+                        <span>11:25</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="selected">
+                        <span>11:25</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="non-available">
+                        <span>11:25</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ./jam -->
+        </section>
+
+        <!-- ./tanggal dan waktu -->
+
+    </div>
+    <!-- ./container -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- javascript ku -->
+    <script>
+        // ambil elemen tanggal avaible
+        const tanggal_available = document.querySelectorAll("#tanggal .available");
+        // jumlah tanggal yg diklik
+        let tgl_click = 0;
+
+        // ketika elemen diklik
+        for (let i = 0; i < tanggal_available.length; i++) {
+            tanggal_available[i].addEventListener('click', function(e){
+                e.preventDefault()
+                if(tgl_click == 0){
+                    // ubah tema jadi selected
+                    e.target.classList.remove("available");
+                    e.target.classList.add("selected");
+                    tgl_click++
+                }else{
+                    e.target.classList.remove("selected");
+                    e.target.classList.add("available");
+                    tgl_click++
+                }
+            })
+        }
+    </script>
+  </body>
+</html>
